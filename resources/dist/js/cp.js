@@ -15017,7 +15017,7 @@ __webpack_require__.r(__webpack_exports__);
 Statamic.booting(function () {
   Statamic.$components.register('zippy', _components_Zippy_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
   Statamic.$app.data.appendedComponents.push(new _vendor_statamic_cms_resources_js_components_Component__WEBPACK_IMPORTED_MODULE_1__["default"]("appended-zippy", 'zippy', {}));
-}); // console.log('This is something, at least')
+});
 
 /***/ }),
 

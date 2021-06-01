@@ -8,5 +8,3 @@ Statamic.booting(() => {
         new Component(`appended-zippy`, 'zippy', {})
     )
 })
-
-console.log('This is something, at least')
