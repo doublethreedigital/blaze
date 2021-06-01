@@ -1,20 +1,42 @@
-![Banner](https://raw.githubusercontent.com/doublethreedigital/addon-boilerplate/master/banner.png)
+![Banner](https://raw.githubusercontent.com/doublethreedigital/zippy/main/banner.png)
 
-## Addon Boilerplate
+## Zippy
 
-This repository is a boilerplate for scaffolding out Statamic Addons. It's really really simple to get started with this boilerplate, which includes: GitHub Actions for running tests, a setup test suite and base `README.md`.
+Zippy allows you to zip around the Statamic Control Panel through the power of search. It's basically [Alfred](https://www.alfredapp.com/), if it lived in the CP.
 
-I use this boilerplate myself as the starting point for any addons I build, feel free to use it to do the same thing yourself. It's kinda like a starter kit but for addons.
-
-> This boilerplate will only generate the bare essentials. If you need a little more, consider using [Fabric](https://github.com/steadfast-collective/fabric). (I made Fabric too)
+This repository contains the source code for Zippy. While Zippy itself is free and doesn't require a license, you can [donate to Duncan](https://duncanmcclean.com/donate), the developer behind it to show your appreciation.
 
 ## Installation
 
-1. Clone this repository `git@github.com:doublethreedigital/addon-boilerplate.git`
-2. Run the script & answer any questions `bash ./boilerplate.sh`
+1. Install via Composer `composer require doublethreedigital/zippy`
+2. To optionally publish a config file, run: `php artisan vendor:publish --tag="zippy-config"`
 
-## Resources for developers
+## Documentation
 
-* [**Discord: #addons-v3**](https://discord.gg/CtMjXcu9pU): Chat, in real-time, with other addon developers
-* [**Statamic GitHub**](https://github.com/statamic/cms): For source-diving and reporting bugs
-* [**Statamic Forum**](https://statamic.com/forum)
+### Configuration
+
+This addon provides its own configuration file. You can use this to configure the API keys and other options.
+
+```php
+return [
+    //
+];
+```
+
+## Security
+
+From a security perspective, only the latest version will receive a security release if a vulnerability is found.
+
+If you discover a security vulnerability within zippy, please report it [via email](mailto:duncan@doublethree.digital) straight away. Please don't report security issues in the issue tracker.
+
+## Resources
+
+* [**Issue Tracker**](https://github.com/doublethreedigital/zippy/issues): Find & report bugs in Zippy
+* [**Email**](mailto:duncan@doublethree.digital): Support from the developer behind the addon
+
+---
+
+<p>
+<a href="https://statamic.com"><img src="https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge" alt="Compatible with Statamic v3"></a>
+<a href="https://packagist.org/packages/doublethreedigital/zippy/stats"><img src="https://img.shields.io/packagist/v/doublethreedigital/zippy?style=for-the-badge" alt=":addonName on Packagist"></a>
+</p>
