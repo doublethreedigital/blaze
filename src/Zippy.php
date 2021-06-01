@@ -3,7 +3,11 @@
 namespace DoubleThreeDigital\Zippy;
 
 use Illuminate\Support\Collection;
+use Statamic\Facades\Collection as StatamicCollection;
+use Statamic\Facades\GlobalSet as StatamicGlobalSet;
+use Statamic\Facades\Nav as StatamicNavigation;
 use Statamic\Facades\Search;
+use Statamic\Facades\Taxonomy as StatamicTaxonomy;
 use Statamic\Facades\User;
 use Statamic\Statamic;
 
@@ -18,7 +22,19 @@ class Zippy
             ->filter(function ($item) {
                 return User::current()->can('view', $item);
             })
-            // ->merge(Nav\Nav::search($query))
+            ->merge(StatamicCollection::all()->filter(function ($collection) use ($query) {
+                return false !== stristr($collection->title(), $query);
+            }))
+            ->merge(StatamicNavigation::all()->filter(function ($navigation) use ($query) {
+                return false !== stristr($navigation->title(), $query);
+            }))
+            ->merge(StatamicTaxonomy::all()->filter(function ($taxonomy) use ($query) {
+                return false !== stristr($taxonomy->title(), $query);
+            }))
+            ->merge(StatamicGlobalSet::all()->filter(function ($globalSet) use ($query) {
+                return false !== stristr($globalSet->title(), $query);
+            }))
+            ->merge(Nav\Nav::search($query))
             ->merge(Documentation\Documentation::search($query))
             ->take(10)
             ->map(function ($result) {
@@ -62,7 +78,7 @@ class Zippy
             return [
                 'title'  => $result->filename(),
                 'icon'   => static::svg('assets'),
-                'url'    => $result->editUrl(),
+                'url'    => $result->showUrl(),
                 'target' => '_self',
                 'parent' => [
                     'title' => $result->container()->handle(),
@@ -78,8 +94,60 @@ class Zippy
                 'url'    => $result->editUrl(),
                 'target' => '_self',
                 'parent' => [
-                    'title' => 'Users',
+                    'title' => __('Users'),
                     'url' => cp_route('users.index'),
+                ],
+            ];
+        }
+
+        if ($result instanceof \Statamic\Contracts\Entries\Collection) {
+            return [
+                'title'  => $result->title(),
+                'icon'   => static::svg('content-writing'),
+                'url'    => $result->showUrl(),
+                'target' => '_self',
+                'parent' => [
+                    'title' => __('Collections'),
+                    'url' => cp_route('collections.index'),
+                ],
+            ];
+        }
+
+        if ($result instanceof \Statamic\Contracts\Structures\Nav) {
+            return [
+                'title'  => $result->title(),
+                'icon'   => static::svg('hierarchy-files'),
+                'url'    => $result->showUrl(),
+                'target' => '_self',
+                'parent' => [
+                    'title' => __('Navigation'),
+                    'url' => cp_route('navigation.index'),
+                ],
+            ];
+        }
+
+        if ($result instanceof \Statamic\Contracts\Taxonomies\Taxonomy) {
+            return [
+                'title'  => $result->title(),
+                'icon'   => static::svg('tags'),
+                'url'    => $result->showUrl(),
+                'target' => '_self',
+                'parent' => [
+                    'title' => __('Taxonomies'),
+                    'url' => cp_route('taxonomies.index'),
+                ],
+            ];
+        }
+
+        if ($result instanceof \Statamic\Contracts\Globals\GlobalSet) {
+            return [
+                'title'  => $result->title(),
+                'icon'   => static::svg('earth'),
+                'url'    => $result->editUrl(),
+                'target' => '_self',
+                'parent' => [
+                    'title' => __('Globals'),
+                    'url' => cp_route('globals.index'),
                 ],
             ];
         }
@@ -87,7 +155,7 @@ class Zippy
         if ($result instanceof \Statamic\CP\Navigation\NavItem) {
             return [
                 'title'  => $result->name(),
-                'icon'   => null,
+                'icon'   => $result->icon(),
                 'url'    => $result->url(),
                 'target' => '_self',
                 'parent' => [
