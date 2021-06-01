@@ -95,11 +95,13 @@ export default {
                     event.preventDefault()
 
                     this.open = !this.open
+                    this.query = null
                 }
 
                 // Escape
                 if (this.open && event.code === 'Escape') {
                     this.open = false
+
                 }
             })
         },
