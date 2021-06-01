@@ -10,6 +10,8 @@ class Nav
     {
         NavFacade::build();
 
-        return NavFacade::items();
+        return collect(NavFacade::items())->filter(function ($navItem) use ($query) {
+            return false !== stristr($navItem->name(), $query);
+        });
     }
 }
