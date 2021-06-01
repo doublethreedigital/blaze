@@ -25,13 +25,14 @@
             <a
                 v-for="result in results"
                 :key="result.url"
-                class="p-2 hover:bg-grey-10 focus:bg-grey-10 focus:outline-none text-grey-80 hover:text-grey-80 w-full flex flex-col"
+                class="p-2 focus:bg-grey-30 focus:outline-none text-grey-80 hover:text-grey-80 w-full flex flex-col"
                 :href="result.url"
                 :target="result.target"
             >
                 <span
                     class="font-medium flex items-center"
                     style="letter-spacing: -0.01em;"
+                    tabindex="-1"
                 >
                     <span
                         v-if="result.icon"
@@ -47,8 +48,9 @@
 
                 <a
                     v-if="result.parent"
-                    class="text-xs text-grey-70 hover:text-blue"
+                    class="text-xs text-grey-70 hover:text-blue focus:outline-none"
                     :href="result.parent.url"
+                    tabindex="-1"
                 >
                     {{ result.parent.title }}
                 </a>

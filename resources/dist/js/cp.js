@@ -2022,6 +2022,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2735,7 +2737,7 @@ var render = function() {
                     {
                       key: result.url,
                       staticClass:
-                        "p-2 hover:bg-grey-10 focus:bg-grey-10 focus:outline-none text-grey-80 hover:text-grey-80 w-full flex flex-col",
+                        "p-2 focus:bg-grey-30 focus:outline-none text-grey-80 hover:text-grey-80 w-full flex flex-col",
                       attrs: { href: result.url, target: result.target }
                     },
                     [
@@ -2743,7 +2745,8 @@ var render = function() {
                         "span",
                         {
                           staticClass: "font-medium flex items-center",
-                          staticStyle: { "letter-spacing": "-0.01em" }
+                          staticStyle: { "letter-spacing": "-0.01em" },
+                          attrs: { tabindex: "-1" }
                         },
                         [
                           result.icon
@@ -2765,8 +2768,8 @@ var render = function() {
                             "a",
                             {
                               staticClass:
-                                "text-xs text-grey-70 hover:text-blue",
-                              attrs: { href: result.parent.url }
+                                "text-xs text-grey-70 hover:text-blue focus:outline-none",
+                              attrs: { href: result.parent.url, tabindex: "-1" }
                             },
                             [
                               _vm._v(
@@ -15014,8 +15017,7 @@ __webpack_require__.r(__webpack_exports__);
 Statamic.booting(function () {
   Statamic.$components.register('zippy', _components_Zippy_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
   Statamic.$app.data.appendedComponents.push(new _vendor_statamic_cms_resources_js_components_Component__WEBPACK_IMPORTED_MODULE_1__["default"]("appended-zippy", 'zippy', {}));
-});
-console.log('This is something, at least');
+}); // console.log('This is something, at least')
 
 /***/ }),
 
