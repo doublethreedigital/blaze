@@ -183,6 +183,10 @@ class Zippy
 
     protected static function svg(string $name): string
     {
+        if (app()->environment('testing')) {
+            return '';
+        }
+
         if ($svg = Statamic::svg($name)) {
             return $svg;
         }
