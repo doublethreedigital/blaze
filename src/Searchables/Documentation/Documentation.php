@@ -1,15 +1,19 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Documentation;
+namespace DoubleThreeDigital\Zippy\Searchables\Documentation;
 
 use Algolia\AlgoliaSearch\SearchClient;
+use DoubleThreeDigital\Zippy\Contracts\Searchable;
+use DoubleThreeDigital\Zippy\Zippy;
+use Illuminate\Support\Collection;
+use Statamic\Contracts\Auth\User;
 
-class Documentation
+class Documentation implements Searchable
 {
     const ALGOLIA_APPLICATION_ID = 'BH4D9OD16A';
     const ALGOLIA_ADMIN_API_KEY = 'b5e8f73c7462a6d5c8b525ef183aabec';
 
-    public static function search(string $query)
+    public function search(string $query): Collection
     {
         $searchResults = [];
 
@@ -46,6 +50,25 @@ class Documentation
             $searchResults[] = new DocumentationHit($title, $hit['url']);
         }
 
-        return $searchResults;
+        return collect($searchResults);
+    }
+
+    public function transform($result): array
+    {
+        return [
+            'title'  => $result->title(),
+            'icon'   => Zippy::svg('statamic-rad-logo'),
+            'url'    => $result->url(),
+            'target' => '_blank',
+            'parent' => [
+                'title' => 'Documentation',
+                'url' => 'https://statamic.dev',
+            ],
+        ];
+    }
+
+    public function authorize(User $user, $result): bool
+    {
+        return $user->isSuper();
     }
 }
