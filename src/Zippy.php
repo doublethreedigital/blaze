@@ -78,7 +78,7 @@ class Zippy
             return [
                 'title'  => $result->filename(),
                 'icon'   => static::svg('assets'),
-                'url'    => $result->showUrl(),
+                'url'    => $result->url(),
                 'target' => '_self',
                 'parent' => [
                     'title' => $result->container()->handle(),
