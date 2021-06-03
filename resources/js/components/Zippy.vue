@@ -57,8 +57,13 @@
             </a>
         </ul>
 
-        <div v-if="dump" class="max-h-screen-1/2 overflow-y-scroll">
-            <div v-html="dump"></div>
+        <div
+            v-if="dump"
+            class="max-h-screen-1/2 overflow-y-scroll"
+        >
+            <div
+                v-html="dump"
+            ></div>
         </div>
     </modal>
 </template>
@@ -80,18 +85,33 @@ export default {
             query: null,
             results: [],
             dump: null,
+            config: null,
         }
     },
 
     mounted() {
-        this.setupKeybindings()
+        this.getConfig()
     },
 
     methods: {
+        getConfig() {
+            axios.get(cp_url('zippy/config'))
+                .then((response) => {
+                    this.config = response.data
+
+                    this.setupKeybindings()
+                })
+                .catch((error) => {
+                    this.$toast.error('Zippy failed to get config')
+                })
+        },
+
         setupKeybindings() {
             document.addEventListener('keydown', (event) => {
+                console.log(event)
+
                 // CMD + P
-                if (event.metaKey && event.code === 'KeyP') {
+                if (event.metaKey && event.key == this.config.config.keyboard_shortcut.toLowerCase()) {
                     event.preventDefault()
 
                     this.open = !this.open
@@ -101,7 +121,6 @@ export default {
                 // Escape
                 if (this.open && event.code === 'Escape') {
                     this.open = false
-
                 }
             })
         },

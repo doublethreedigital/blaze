@@ -6,6 +6,8 @@ use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
+    protected $config = false;
+
     protected $scripts = [
         __DIR__.'/../resources/dist/js/cp.js',
     ];
@@ -17,5 +19,11 @@ class ServiceProvider extends AddonServiceProvider
     public function boot()
     {
         parent::boot();
+
+        $this->mergeConfigFrom(__DIR__.'/../config/zippy.php', 'zippy');
+
+        $this->publishes([
+            __DIR__.'/../config/zippy.php',
+        ], 'zippy-config');
     }
 }

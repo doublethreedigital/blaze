@@ -1,6 +1,10 @@
 <?php
 
+use DoubleThreeDigital\Zippy\Http\Controllers\ConfigController;
 use DoubleThreeDigital\Zippy\Http\Controllers\ZippyController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/zippy', [ZippyController::class, 'index'])->name('zippy');
+Route::name('zippy.')->prefix('zippy')->group(function () {
+    Route::post('/', [ZippyController::class, 'index']);
+    Route::get('/config', [ConfigController::class, 'index']);
+});
