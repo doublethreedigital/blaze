@@ -10,6 +10,18 @@ use Statamic\Statamic;
 
 abstract class TestCase extends OrchestraTestCase
 {
+    protected $shouldFakeVersion = true;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        if ($this->shouldFakeVersion) {
+            \Facades\Statamic\Version::shouldReceive('get')->andReturn('3.1.0-testing');
+            $this->addToAssertionCount(-1); // Dont want to assert this
+        }
+    }
+
     protected function getPackageProviders($app)
     {
         return [
@@ -51,5 +63,14 @@ abstract class TestCase extends OrchestraTestCase
         }
 
         $app['config']->set('statamic.users.repository', 'file');
+        $app['config']->set('statamic.editions.pro', true);
+
+        $app['config']->set('statamic.stache.stores.taxonomies.directory', __DIR__.'/__fixtures__/content/taxonomies');
+        $app['config']->set('statamic.stache.stores.terms.directory', __DIR__.'/__fixtures__/content/taxonomies');
+        $app['config']->set('statamic.stache.stores.collections.directory', __DIR__.'/__fixtures__/content/collections');
+        $app['config']->set('statamic.stache.stores.entries.directory', __DIR__.'/__fixtures__/content/collections');
+        $app['config']->set('statamic.stache.stores.navigation.directory', __DIR__.'/__fixtures__/content/navigation');
+        $app['config']->set('statamic.stache.stores.globals.directory', __DIR__.'/__fixtures__/content/globals');
+        $app['config']->set('statamic.stache.stores.asset-containers.directory', __DIR__.'/__fixtures__/content/assets');
     }
 }
