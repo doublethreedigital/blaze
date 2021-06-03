@@ -2,7 +2,7 @@
 
 ## Zippy
 
-Zippy allows you to zip around the Statamic Control Panel through the power of search. It's basically [Alfred](https://www.alfredapp.com/), if it lived in the CP.
+Zippy amplifies the search inside the Control Panel - linking you to entries, collections, nav items & documentation. It's almost like [Alfred](https://www.alfredapp.com/), but built inside the CP.
 
 This repository contains the source code for Zippy. While Zippy itself is free and doesn't require a license, you can [donate to Duncan](https://duncanmcclean.com/donate), the developer behind it to show your appreciation.
 
