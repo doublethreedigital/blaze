@@ -108,8 +108,6 @@ export default {
 
         setupKeybindings() {
             document.addEventListener('keydown', (event) => {
-                console.log(event)
-
                 // CMD + P
                 if (event.metaKey && event.key == this.config.config.keyboard_shortcut.toLowerCase()) {
                     event.preventDefault()
