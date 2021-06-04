@@ -1,9 +1,9 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Searchables;
+namespace DoubleThreeDigital\Blaze\Searchables;
 
-use DoubleThreeDigital\Zippy\Contracts\Searchable;
-use DoubleThreeDigital\Zippy\Zippy;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
+use DoubleThreeDigital\Blaze\Blaze;
 use Illuminate\Support\Collection;
 use Statamic\Contracts\Auth\User;
 use Statamic\Facades\GlobalSet as GlobalSetFacade;
@@ -21,7 +21,7 @@ class GlobalSet implements Searchable
     {
         return [
             'title'  => $result->title(),
-            'icon'   => Zippy::svg('earth'),
+            'icon'   => Blaze::svg('earth'),
             'url'    => $result->editUrl(),
             'target' => '_self',
             'parent' => [

@@ -1,7 +1,7 @@
 <template>
     <modal
         v-if="open"
-        name="zippy"
+        name="blaze"
         width="510"
         height="auto"
         :adaptive="true"
@@ -73,7 +73,7 @@ import axios from 'axios'
 import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
-    name: 'zippy',
+    name: 'blaze',
 
     mixins: [
         clickaway,
@@ -95,14 +95,14 @@ export default {
 
     methods: {
         getConfig() {
-            axios.get(cp_url('zippy/config'))
+            axios.get(cp_url('blaze/config'))
                 .then((response) => {
                     this.config = response.data
 
                     this.setupKeybindings()
                 })
                 .catch((error) => {
-                    this.$toast.error('Zippy failed to get config')
+                    this.$toast.error('Blaze failed to get config')
                 })
         },
 
@@ -130,7 +130,7 @@ export default {
                 this.results = []
             }
 
-            axios.post(cp_url('zippy'), {
+            axios.post(cp_url('blaze'), {
                 query: this.query,
             }).then((response) => {
                 if (typeof response.data === 'string') {

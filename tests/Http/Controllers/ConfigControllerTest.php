@@ -1,8 +1,8 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Tests\Http\Controllers;
+namespace DoubleThreeDigital\Blaze\Tests\Http\Controllers;
 
-use DoubleThreeDigital\Zippy\Tests\TestCase;
+use DoubleThreeDigital\Blaze\Tests\TestCase;
 use Illuminate\Support\Facades\Config;
 use Statamic\Facades\User;
 
@@ -18,11 +18,11 @@ class ConfigControllerTest extends TestCase
             'baz' => 'bax',
         ];
 
-        Config::set('zippy', $configData);
+        Config::set('blaze', $configData);
 
         $this
             ->actingAs($this->user())
-            ->get(cp_route('zippy.config'))
+            ->get(cp_route('blaze.config'))
             ->assertOk()
             ->assertJson([
                 'config' => $configData,

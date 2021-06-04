@@ -1,25 +1,25 @@
 {
-    "name": "doublethreedigital/zippy",
-    "description": "Zip around the Statamic Control Panel",
+    "name": "doublethreedigital/blaze",
+    "description": "Amplified Search in the Statamic CP",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "DoubleThreeDigital\\Zippy\\": "src"
+            "DoubleThreeDigital\\Blaze\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DoubleThreeDigital\\Zippy\\Tests\\": "tests"
+            "DoubleThreeDigital\\Blaze\\Tests\\": "tests"
         }
     },
     "extra": {
         "statamic": {
-            "name": "zippy",
-            "description": "Zip around the Statamic Control Panel"
+            "name": "Blaze",
+            "description": "Amplified Search in the Statamic CP"
         },
         "laravel": {
             "providers": [
-                "DoubleThreeDigital\\Zippy\\ServiceProvider"
+                "DoubleThreeDigital\\Blaze\\ServiceProvider"
             ]
         }
     },

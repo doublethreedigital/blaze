@@ -1,6 +1,6 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy;
+namespace DoubleThreeDigital\Blaze;
 
 use Statamic\Providers\AddonServiceProvider;
 
@@ -20,10 +20,10 @@ class ServiceProvider extends AddonServiceProvider
     {
         parent::boot();
 
-        $this->mergeConfigFrom(__DIR__.'/../config/zippy.php', 'zippy');
+        $this->mergeConfigFrom(__DIR__.'/../config/blaze.php', 'blaze');
 
         $this->publishes([
-            __DIR__.'/../config/zippy.php',
-        ], 'zippy-config');
+            __DIR__.'/../config/blaze.php',
+        ], 'blaze-config');
     }
 }

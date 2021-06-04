@@ -1,9 +1,9 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Searchables;
+namespace DoubleThreeDigital\Blaze\Searchables;
 
-use DoubleThreeDigital\Zippy\Contracts\Searchable;
-use DoubleThreeDigital\Zippy\Zippy;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
+use DoubleThreeDigital\Blaze\Blaze;
 use Illuminate\Support\Collection as IlluminateCollection;
 use Statamic\Contracts\Auth\User;
 use Statamic\Facades\Search;
@@ -23,7 +23,7 @@ class StatamicSearch implements Searchable
         if ($result instanceof \Statamic\Contracts\Entries\Entry) {
             return [
                 'title'  => $result->get('title'),
-                'icon'   => Zippy::svg('content-writing'),
+                'icon'   => Blaze::svg('content-writing'),
                 'url'    => $result->editUrl(),
                 'target' => '_self',
                 'parent' => [
@@ -36,7 +36,7 @@ class StatamicSearch implements Searchable
         if ($result instanceof \Statamic\Contracts\Taxonomies\Term) {
             return [
                 'title'  => $result->get('title'),
-                'icon'   => Zippy::svg('tags'),
+                'icon'   => Blaze::svg('tags'),
                 'url'    => $result->editUrl(),
                 'target' => '_self',
                 'parent' => [
@@ -49,7 +49,7 @@ class StatamicSearch implements Searchable
         if ($result instanceof \Statamic\Contracts\Assets\Asset) {
             return [
                 'title'  => $result->filename(),
-                'icon'   => Zippy::svg('assets'),
+                'icon'   => Blaze::svg('assets'),
                 'url'    => $result->url(),
                 'target' => '_self',
                 'parent' => [
@@ -62,7 +62,7 @@ class StatamicSearch implements Searchable
         if ($result instanceof \Statamic\Contracts\Auth\User) {
             return [
                 'title'  => $result->title(),
-                'icon'   => Zippy::svg('users-box'),
+                'icon'   => Blaze::svg('users-box'),
                 'url'    => $result->editUrl(),
                 'target' => '_self',
                 'parent' => [

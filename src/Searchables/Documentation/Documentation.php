@@ -1,10 +1,10 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Searchables\Documentation;
+namespace DoubleThreeDigital\Blaze\Searchables\Documentation;
 
 use Algolia\AlgoliaSearch\SearchClient;
-use DoubleThreeDigital\Zippy\Contracts\Searchable;
-use DoubleThreeDigital\Zippy\Zippy;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
+use DoubleThreeDigital\Blaze\Blaze;
 use Illuminate\Support\Collection;
 use Statamic\Contracts\Auth\User;
 
@@ -57,7 +57,7 @@ class Documentation implements Searchable
     {
         return [
             'title'  => $result->title(),
-            'icon'   => Zippy::svg('statamic-rad-logo'),
+            'icon'   => Blaze::svg('statamic-rad-logo'),
             'url'    => $result->url(),
             'target' => '_blank',
             'parent' => [

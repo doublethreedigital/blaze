@@ -7,7 +7,7 @@ return [
     | Keyboard Shortcut
     |--------------------------------------------------------------------------
     |
-    | Which keyboard shortcut should open Zippy's search overlay?
+    | Which keyboard shortcut should open Blaze's search overlay?
     | ⌘ and X?
     |
     */
@@ -19,19 +19,19 @@ return [
     | Searchables
     |--------------------------------------------------------------------------
     |
-    | What should Zippy be able to search through?
+    | What should Blaze be able to search through?
     | (the order of the searchables will influence the order in the results)
     |
     */
 
     'searchables' => [
-        \DoubleThreeDigital\Zippy\Searchables\StatamicSearch::class,
-        \DoubleThreeDigital\Zippy\Searchables\Collection::class,
-        \DoubleThreeDigital\Zippy\Searchables\Navigation::class,
-        \DoubleThreeDigital\Zippy\Searchables\Taxonomy::class,
-        \DoubleThreeDigital\Zippy\Searchables\GlobalSet::class,
-        \DoubleThreeDigital\Zippy\Searchables\CPNav::class,
-        \DoubleThreeDigital\Zippy\Searchables\Documentation\Documentation::class,
+        \DoubleThreeDigital\Blaze\Searchables\StatamicSearch::class,
+        \DoubleThreeDigital\Blaze\Searchables\Collection::class,
+        \DoubleThreeDigital\Blaze\Searchables\Navigation::class,
+        \DoubleThreeDigital\Blaze\Searchables\Taxonomy::class,
+        \DoubleThreeDigital\Blaze\Searchables\GlobalSet::class,
+        \DoubleThreeDigital\Blaze\Searchables\CPNav::class,
+        \DoubleThreeDigital\Blaze\Searchables\Documentation\Documentation::class,
     ],
 
 ];
