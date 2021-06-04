@@ -76,7 +76,7 @@ If you want, you can create your own searchables. Just create a class which impl
 
 ### Usage
 
-To open the Blaze modal, press `⌘ P` on Mac or `Ctrl P` on Windows (unless you've configured otherwise). You may then search for anything you like, out of the box, the following 'searchables' are supported:
+To open the Blaze modal, press `⌘ P` on Mac or `Ctrl P` on Windows (unless you've configured otherwise). You can either press the same keyboard shortcut again to exit or you can press `Escape`. You may then search for anything you like, out of the box, the following 'searchables' are supported:
 
 * Statamic's Native Search (covers entries, terms and users)
 * Collections
