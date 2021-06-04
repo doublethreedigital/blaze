@@ -27,7 +27,8 @@ class Blaze
                     })
                     ->toArray();
             })
-            ->take(10);
+            ->take(10)
+            ->values();
     }
 
     public static function svg(string $name): string

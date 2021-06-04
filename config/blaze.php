@@ -31,6 +31,7 @@ return [
         \DoubleThreeDigital\Blaze\Searchables\Taxonomy::class,
         \DoubleThreeDigital\Blaze\Searchables\GlobalSet::class,
         \DoubleThreeDigital\Blaze\Searchables\CPNav::class,
+        \DoubleThreeDigital\Blaze\Searchables\Utility::class,
         \DoubleThreeDigital\Blaze\Searchables\Documentation\Documentation::class,
     ],
 

@@ -15,6 +15,10 @@ class CPNav implements Searchable
 
         return collect(NavFacade::items())->filter(function ($navItem) use ($query) {
             return false !== stristr($navItem->name(), $query);
+        })->reject(function ($navItem) {
+            // We don't want no utilities here.. we have a separate searchable for that
+
+            return str_contains($navItem->url(), "utilities/");
         });
     }
 
