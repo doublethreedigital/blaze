@@ -158,3 +158,11 @@ export default {
     },
 }
 </script>
+
+<style>
+/* Please don't hunt me down and tell me off, this is GOOD css btw. Thanks and goodbye. */
+
+[data-modal="blaze"] .v--modal-box {
+    top: 79px !important;
+}
+</style>
