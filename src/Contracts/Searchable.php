@@ -1,6 +1,6 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Contracts;
+namespace DoubleThreeDigital\Blaze\Contracts;
 
 use Illuminate\Support\Collection;
 use Statamic\Contracts\Auth\User;

@@ -1,9 +1,9 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Searchables;
+namespace DoubleThreeDigital\Blaze\Searchables;
 
-use DoubleThreeDigital\Zippy\Contracts\Searchable;
-use DoubleThreeDigital\Zippy\Zippy;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
+use DoubleThreeDigital\Blaze\Blaze;
 use Illuminate\Support\Collection as IlluminateCollection;
 use Statamic\Contracts\Auth\User;
 use Statamic\Facades\Collection as CollectionFacade;
@@ -21,7 +21,7 @@ class Collection implements Searchable
     {
         return [
             'title'  => $result->title(),
-            'icon'   => Zippy::svg('content-writing'),
+            'icon'   => Blaze::svg('content-writing'),
             'url'    => $result->showUrl(),
             'target' => '_self',
             'parent' => [

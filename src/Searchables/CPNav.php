@@ -1,8 +1,8 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Searchables;
+namespace DoubleThreeDigital\Blaze\Searchables;
 
-use DoubleThreeDigital\Zippy\Contracts\Searchable;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
 use Illuminate\Support\Collection;
 use Statamic\Contracts\Auth\User;
 use Statamic\Facades\CP\Nav as NavFacade;

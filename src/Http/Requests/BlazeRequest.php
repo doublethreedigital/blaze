@@ -1,10 +1,10 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Http\Requests;
+namespace DoubleThreeDigital\Blaze\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ZippyRequest extends FormRequest
+class BlazeRequest extends FormRequest
 {
     public function authorize()
     {

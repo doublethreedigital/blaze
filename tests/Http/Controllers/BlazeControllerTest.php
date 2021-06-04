@@ -1,8 +1,8 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Tests\Http\Controllers;
+namespace DoubleThreeDigital\Blaze\Tests\Http\Controllers;
 
-use DoubleThreeDigital\Zippy\Tests\TestCase;
+use DoubleThreeDigital\Blaze\Tests\TestCase;
 use Statamic\Facades\Collection;
 use Statamic\Facades\Entry;
 use Statamic\Facades\GlobalSet;
@@ -11,7 +11,7 @@ use Statamic\Facades\Taxonomy;
 use Statamic\Facades\Term;
 use Statamic\Facades\User;
 
-class ZippyControllerTest extends TestCase
+class BlazeControllerTest extends TestCase
 {
     /** @test */
     public function can_search_for_entry()
@@ -29,7 +29,7 @@ class ZippyControllerTest extends TestCase
 
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search'), [
+            ->post(cp_route('blaze.search'), [
                 'query' => 'Foo',
             ])
             ->assertOk()
@@ -54,7 +54,7 @@ class ZippyControllerTest extends TestCase
 
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'Bar',
             ]))
             ->assertOk()
@@ -74,7 +74,7 @@ class ZippyControllerTest extends TestCase
 
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'Jan',
             ]))
             ->assertOk()
@@ -91,7 +91,7 @@ class ZippyControllerTest extends TestCase
 
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'animals',
             ]))
             ->assertOk()
@@ -108,7 +108,7 @@ class ZippyControllerTest extends TestCase
 
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'header',
             ]))
             ->assertOk()
@@ -125,7 +125,7 @@ class ZippyControllerTest extends TestCase
 
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'tags',
             ]))
             ->assertOk()
@@ -142,7 +142,7 @@ class ZippyControllerTest extends TestCase
 
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'SEO',
             ]))
             ->assertOk()
@@ -155,7 +155,7 @@ class ZippyControllerTest extends TestCase
     {
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'Updates',
             ]))
             ->assertOk()
@@ -168,7 +168,7 @@ class ZippyControllerTest extends TestCase
     {
         $this
             ->actingAs($this->user())
-            ->post(cp_route('zippy.search', [
+            ->post(cp_route('blaze.search', [
                 'query' => 'Independent',
             ]))
             ->assertOk()

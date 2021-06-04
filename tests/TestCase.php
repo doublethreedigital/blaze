@@ -1,10 +1,10 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Tests;
+namespace DoubleThreeDigital\Blaze\Tests;
 
 use Statamic\Extend\Manifest;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use DoubleThreeDigital\Zippy\ServiceProvider;
+use DoubleThreeDigital\Blaze\ServiceProvider;
 use Statamic\Providers\StatamicServiceProvider;
 use Statamic\Statamic;
 
@@ -42,9 +42,9 @@ abstract class TestCase extends OrchestraTestCase
         parent::getEnvironmentSetUp($app);
 
         $app->make(Manifest::class)->manifest = [
-            'doublethreedigital/zippy' => [
-                'id' => 'doublethreedigital/zippy',
-                'namespace' => 'DoubleThreeDigital\\Zippy\\',
+            'doublethreedigital/blaze' => [
+                'id' => 'doublethreedigital/blaze',
+                'namespace' => 'DoubleThreeDigital\\Blaze\\',
             ],
         ];
     }

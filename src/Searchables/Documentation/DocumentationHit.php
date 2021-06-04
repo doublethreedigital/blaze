@@ -1,6 +1,6 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Searchables\Documentation;
+namespace DoubleThreeDigital\Blaze\Searchables\Documentation;
 
 class DocumentationHit
 {

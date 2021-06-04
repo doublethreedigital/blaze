@@ -1,9 +1,9 @@
 <?php
 
-namespace DoubleThreeDigital\Zippy\Searchables;
+namespace DoubleThreeDigital\Blaze\Searchables;
 
-use DoubleThreeDigital\Zippy\Contracts\Searchable;
-use DoubleThreeDigital\Zippy\Zippy;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
+use DoubleThreeDigital\Blaze\Blaze;
 use Illuminate\Support\Collection;
 use Statamic\Contracts\Auth\User;
 use Statamic\Facades\Taxonomy as TaxonomyFacade;
@@ -21,7 +21,7 @@ class Taxonomy implements Searchable
     {
         return [
             'title'  => $result->title(),
-            'icon'   => Zippy::svg('tags'),
+            'icon'   => Blaze::svg('tags'),
             'url'    => $result->showUrl(),
             'target' => '_self',
             'parent' => [
