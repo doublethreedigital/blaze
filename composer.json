@@ -21,11 +21,16 @@
             "providers": [
                 "DoubleThreeDigital\\Blaze\\ServiceProvider"
             ]
+        },
+        "download-dist": {
+            "url": "https://github.com/doublethreedigital/blaze/releases/download/{$version}/dist.tar.gz",
+            "path": "resources/dist"
         }
     },
     "require": {
         "php": "^7.4 || ^8.0",
         "algolia/algoliasearch-client-php": "^3.0",
+        "pixelfear/composer-dist-plugin": "^0.1.5",
         "statamic/cms": "3.0.* || 3.1.*"
     },
     "require-dev": {
