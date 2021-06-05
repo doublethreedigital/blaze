@@ -13,6 +13,7 @@
             class="bg-grey-20 border-b text-center"
         >
             <input
+                id="blaze-input"
                 type="text"
                 class="p-2 text-lg w-full bg-transparent focus:outline-none"
                 v-model="query"
@@ -152,6 +153,19 @@ export default {
     },
 
     watch: {
+        open(value) {
+            if (value === true) {
+                let openInputTimer = setInterval(() => {
+                    if (document.getElementById('blaze-input')) {
+                        document.getElementById('blaze-input').autofocus
+                        document.getElementById('blaze-input').focus()
+
+                        clearInterval(openInputTimer)
+                    }
+                }, 100)
+            }
+        },
+
         query(value) {
             this.getResults()
         },
