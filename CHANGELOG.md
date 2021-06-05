@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## v1.0.3 (2021-06-05)
+
+* Fix autofocusing on the search input #12
+
 ## v1.0.2 (2021-06-04)
 
 * Better searching of utilities #8
