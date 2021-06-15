@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## v1.0.4 (2021-06-15)
+
+* Fix error when publishing config file #13
+
 ## v1.0.3 (2021-06-05)
 
 * Fix autofocusing on the search input #12

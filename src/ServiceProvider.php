@@ -23,7 +23,7 @@ class ServiceProvider extends AddonServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/blaze.php', 'blaze');
 
         $this->publishes([
-            __DIR__.'/../config/blaze.php',
+            __DIR__.'/../config/blaze.php' => config_path('blaze.php'),
         ], 'blaze-config');
     }
 }
