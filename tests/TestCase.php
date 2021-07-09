@@ -5,6 +5,7 @@ namespace DoubleThreeDigital\Blaze\Tests;
 use Statamic\Extend\Manifest;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use DoubleThreeDigital\Blaze\ServiceProvider;
+use Statamic\Facades\Blueprint;
 use Statamic\Providers\StatamicServiceProvider;
 use Statamic\Statamic;
 
@@ -47,6 +48,8 @@ abstract class TestCase extends OrchestraTestCase
                 'namespace' => 'DoubleThreeDigital\\Blaze\\',
             ],
         ];
+
+        Blueprint::setDirectory(__DIR__.'/__fixtures__/resources/blueprints');
     }
 
     protected function resolveApplicationConfiguration($app)

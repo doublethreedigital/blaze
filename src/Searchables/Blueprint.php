@@ -46,11 +46,11 @@ class Blueprint implements Searchable
     {
         $paths = [];
 
-        foreach (File::directories(resource_path('blueprints')) as $directory) {
-            $paths[] = str_after($directory, resource_path('blueprints'));
+        foreach (File::directories(BlueprintFacade::directory()) as $directory) {
+            $paths[] = str_after($directory, BlueprintFacade::directory());
 
             foreach (File::directories($directory) as $secondDirectory) {
-                $paths[] = str_after($secondDirectory, resource_path('blueprints'));
+                $paths[] = str_after($secondDirectory, BlueprintFacade::directory());
             }
         }
 
