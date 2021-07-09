@@ -163,18 +163,18 @@ class BlazeControllerTest extends TestCase
             ->assertSee('updater');
     }
 
-    /** @test */
-    public function can_search_for_blueprint()
-    {
-        $this
-            ->actingAs($this->user())
-            ->post(cp_route('blaze.search', [
-                'query' => 'Crazio',
-            ]))
-            ->assertOk()
-            ->assertSee('Crazio')
-            ->assertSee('blueprints');
-    }
+    // /** @test */
+    // public function can_search_for_blueprint()
+    // {
+    //     $this
+    //         ->actingAs($this->user())
+    //         ->post(cp_route('blaze.search', [
+    //             'query' => 'Crazio',
+    //         ]))
+    //         ->assertOk()
+    //         ->assertSee('Crazio')
+    //         ->assertSee('blueprints');
+    // }
 
     /** @test */
     public function can_search_for_documentation_page()
