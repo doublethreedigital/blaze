@@ -176,6 +176,20 @@ class BlazeControllerTest extends TestCase
             ->assertSee('blueprints');
     }
 
+
+    /** @test */
+    public function can_search_for_fieldset()
+    {
+        $this
+            ->actingAs($this->user())
+            ->post(cp_route('blaze.search', [
+                'query' => 'Coolz',
+            ]))
+            ->assertOk()
+            ->assertSee('Coolzies')
+            ->assertSee('fieldsets');
+    }
+
     /** @test */
     public function can_search_for_utility()
     {

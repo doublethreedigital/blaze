@@ -33,6 +33,7 @@ return [
         \DoubleThreeDigital\Blaze\Searchables\Form::class,
         \DoubleThreeDigital\Blaze\Searchables\CPNav::class,
         \DoubleThreeDigital\Blaze\Searchables\Blueprint::class,
+        \DoubleThreeDigital\Blaze\Searchables\Fieldset::class,
         \DoubleThreeDigital\Blaze\Searchables\Utility::class,
         \DoubleThreeDigital\Blaze\Searchables\Documentation\Documentation::class,
     ],

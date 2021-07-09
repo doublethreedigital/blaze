@@ -6,6 +6,7 @@ use Statamic\Extend\Manifest;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use DoubleThreeDigital\Blaze\ServiceProvider;
 use Statamic\Facades\Blueprint;
+use Statamic\Facades\Fieldset;
 use Statamic\Providers\StatamicServiceProvider;
 use Statamic\Statamic;
 
@@ -49,6 +50,7 @@ abstract class TestCase extends OrchestraTestCase
             ],
         ];
 
+        Fieldset::setDirectory(__DIR__.'/__fixtures__/resources/fieldsets');
         Blueprint::setDirectory(__DIR__.'/__fixtures__/resources/blueprints');
     }
 
