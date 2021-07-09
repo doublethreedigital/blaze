@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v1.0.5 (2021-07-09)
+
+### What's new
+
+* Added four new searchables: Blueprints, Fieldsets, Groups and Permissions
+
 ## v1.0.4 (2021-06-15)
 
 * Fix error when publishing config file #13
