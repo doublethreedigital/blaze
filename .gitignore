@@ -8,3 +8,5 @@ package-lock.json
 
 resources/dist/mix-manifest.json
 resources/dist/js/cp.js
+
+tests/__fixtures__/content

@@ -27,18 +27,14 @@ class BlazeControllerTest extends TestCase
             ])
             ->save();
 
-        $this->withoutExceptionHandling();
-
-        $r = $this
+        $this
             ->actingAs($this->user())
             ->post(cp_route('blaze.search'), [
                 'query' => 'Foo',
-            ]);
-            // ->assertOk()
-            // ->assertSee('Foo Die Bar')
-            // ->assertSee('id-one');
-
-        dd($r);
+            ])
+            ->assertOk()
+            ->assertSee('Foo Die Bar')
+            ->assertSee('id-one');
     }
 
     /** @test */
