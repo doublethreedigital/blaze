@@ -35,6 +35,8 @@ return [
         \DoubleThreeDigital\Blaze\Searchables\Blueprint::class,
         \DoubleThreeDigital\Blaze\Searchables\Fieldset::class,
         \DoubleThreeDigital\Blaze\Searchables\Utility::class,
+        \DoubleThreeDigital\Blaze\Searchables\UserGroup::class,
+        \DoubleThreeDigital\Blaze\Searchables\UserRole::class,
         \DoubleThreeDigital\Blaze\Searchables\Documentation\Documentation::class,
     ],
 

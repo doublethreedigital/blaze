@@ -7,9 +7,11 @@ use Statamic\Facades\Collection;
 use Statamic\Facades\Entry;
 use Statamic\Facades\GlobalSet;
 use Statamic\Facades\Nav;
+use Statamic\Facades\Role;
 use Statamic\Facades\Taxonomy;
 use Statamic\Facades\Term;
 use Statamic\Facades\User;
+use Statamic\Facades\UserGroup;
 
 class BlazeControllerTest extends TestCase
 {
@@ -201,6 +203,41 @@ class BlazeControllerTest extends TestCase
             ->assertOk()
             ->assertSee('Cache Manager')
             ->assertSee('utilities');
+    }
+
+    /** @test */
+    public function can_search_for_user_group()
+    {
+        UserGroup::make()
+            ->handle('authors')
+            ->title('Authors')
+            ->save();
+
+        $this
+            ->actingAs($this->user())
+            ->post(cp_route('blaze.search', [
+                'query' => 'Autho',
+            ]))
+            ->assertOk()
+            ->assertSee('Authors')
+            ->assertSee('groups');
+    }
+
+    /** @test */
+    public function can_search_for_user_role()
+    {
+        Role::make('content-editors')
+            ->title('Content Editors')
+            ->save();
+
+        $this
+            ->actingAs($this->user())
+            ->post(cp_route('blaze.search', [
+                'query' => 'Content Ed',
+            ]))
+            ->assertOk()
+            ->assertSee('Content Editors')
+            ->assertSee('roles');
     }
 
     /** @test */
