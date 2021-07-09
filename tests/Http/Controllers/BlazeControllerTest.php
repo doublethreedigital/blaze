@@ -177,6 +177,19 @@ class BlazeControllerTest extends TestCase
     }
 
     /** @test */
+    public function can_search_for_utility()
+    {
+        $this
+            ->actingAs($this->user())
+            ->post(cp_route('blaze.search', [
+                'query' => 'Cache Ma',
+            ]))
+            ->assertOk()
+            ->assertSee('Cache Manager')
+            ->assertSee('utilities');
+    }
+
+    /** @test */
     public function can_search_for_documentation_page()
     {
         $this
