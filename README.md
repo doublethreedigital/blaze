@@ -9,6 +9,7 @@ This repository contains the source code for Blaze. While Blaze itself is free a
 ## Installation
 
 1. Install via Composer `composer require doublethreedigital/blaze`
+2. That's it. All done! Use it with: `⌘ P` (or `Ctrl P`)
 
 ## Documentation
 
