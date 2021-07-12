@@ -89,6 +89,9 @@ To open the Blaze modal, press `⌘ P` on Mac or `Ctrl P` on Windows (unless you
 * Taxonomies
 * Globals
 * CP Nav Items
+* Blueprints / Fieldsets
+* Utilities
+* User Groups & Permissions
 * Statamic Documentation
 
 ## Security
