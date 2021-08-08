@@ -104,7 +104,7 @@ If you discover a security vulnerability within Blaze, please report it [via ema
 ## Resources
 
 * [**Issue Tracker**](https://github.com/doublethreedigital/blaze/issues): Find & report bugs in Blaze
-* [**Email**](mailto:duncan@doublethree.digital): Support from the developer behind the addon
+* [**Email**](mailto:help@doublethree.digital): Support from the developer behind the addon
 
 ---
 
