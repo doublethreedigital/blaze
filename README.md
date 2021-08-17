@@ -1,6 +1,10 @@
+<!-- statamic:hide -->
+
 ![Banner](https://raw.githubusercontent.com/doublethreedigital/blaze/main/banner.png)
 
 ## Blaze
+
+<!-- /statamic:hide -->
 
 Blaze amplifies the search inside the Control Panel - linking you to entries, collections, nav items & documentation. It's almost like [Alfred](https://www.alfredapp.com/), but built inside the CP. [**Watch a short demo video**](https://www.loom.com/share/921195d9d2074811af4ba1179623008b)
 
@@ -106,9 +110,13 @@ If you discover a security vulnerability within Blaze, please report it [via ema
 * [**Issue Tracker**](https://github.com/doublethreedigital/blaze/issues): Find & report bugs in Blaze
 * [**Email**](mailto:help@doublethree.digital): Support from the developer behind the addon
 
+<!-- statamic:hide -->
+
 ---
 
 <p>
 <a href="https://statamic.com"><img src="https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge" alt="Compatible with Statamic v3"></a>
 <a href="https://packagist.org/packages/doublethreedigital/blaze/stats"><img src="https://img.shields.io/packagist/v/doublethreedigital/blaze?style=for-the-badge" alt="Blaze on Packagist"></a>
 </p>
+
+<!-- /statamic:hide -->
