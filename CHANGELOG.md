@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v1.0.6 (2021-08-19)
+
+### What's new
+
+* Support for [Statamic 3.2](https://statamic.com/blog/statamic-3.2-beta)
+
 ## v1.0.5 (2021-07-09)
 
 ### What's new
