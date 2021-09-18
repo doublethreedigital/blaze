@@ -8,7 +8,7 @@
 
 Blaze amplifies the search inside the Control Panel - linking you to entries, collections, nav items & documentation. It's almost like [Alfred](https://www.alfredapp.com/), but built inside the CP. <!-- statamic:hide --> [**Watch a short demo video**](https://www.loom.com/share/921195d9d2074811af4ba1179623008b) <!-- /statamic:hide -->
 
-This repository contains the source code for Blaze. While Blaze itself is free and doesn't require a license, you can [donate to Duncan](https://duncanmcclean.com/donate), the developer behind it to show your appreciation.
+This repository contains the source code for Blaze. While Blaze is free and doesn't require you to purchase a license, consider [sponsoring Duncan](https://github.com/sponsors/duncanmcclean) to support the ongoing maintenance and development of new features.
 
 ## Installation
 
