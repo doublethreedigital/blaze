@@ -8,12 +8,15 @@
 
 Blaze amplifies the search inside the Control Panel - linking you to entries, collections, nav items & documentation. It's almost like [Alfred](https://www.alfredapp.com/), but built inside the CP. <!-- statamic:hide --> [**Watch a short demo video**](https://www.loom.com/share/921195d9d2074811af4ba1179623008b) <!-- /statamic:hide -->
 
-This repository contains the source code for Blaze. While Blaze is free and doesn't require you to purchase a license, consider [sponsoring Duncan](https://github.com/sponsors/duncanmcclean) to support the ongoing maintenance and development of new features.
-
 ## Installation
 
-1. Install via Composer `composer require doublethreedigital/blaze`
-2. That's it. All done! Use it with: `⌘ P` (or `Ctrl P`)
+Installing Blaze is simple! All you need to do is require Blaze as a dependency in your app:
+
+```
+composer require doublethreedigital/blaze
+```
+
+Now, you should be able to open up Blaze with `⌘ P` (or `Ctrl P` on Windows) 
 
 ## Documentation
 
@@ -99,16 +102,18 @@ To open the Blaze modal, press `⌘ P` on Mac or `Ctrl P` on Windows (unless you
 * User Groups & Permissions
 * Statamic Documentation
 
+## Sponsor Duncan
+
+This addon is open-source, meaning anyone can use this addon in their sites for **free**! 
+
+However, maintaining and developing new features for open-source projects can take quite a bit of time. If you're using Blaze in your production environment, please [consider sponsoring me](https://github.com/sponsors/duncanmcclean) (Duncan McClean) for a couple dollars a month.
+
+
 ## Security
 
-From a security perspective, only the latest version will receive a security release if a vulnerability is found.
+Only the latest version of Blaze (v1.0) will receive security updates if a vulnerability is found. 
 
-If you discover a security vulnerability within Blaze, please report it [via email](mailto:duncan@doublethree.digital) straight away. Please don't report security issues in the issue tracker.
-
-## Resources
-
-* [**Issue Tracker**](https://github.com/doublethreedigital/blaze/issues): Find & report bugs in Blaze
-* [**Email**](mailto:help@doublethree.digital): Support from the developer behind the addon
+If you discover a security vulnerability, please report it to Duncan straight away, [via email](mailto:duncan@doublethree.digital). Please don't report security issues through GitHub Issues.
 
 <!-- statamic:hide -->
 
