@@ -1,6 +1,6 @@
 <!-- statamic:hide -->
 
-![Banner](https://raw.githubusercontent.com/doublethreedigital/blaze/main/banner.png)
+![Banner](./banner.png)
 
 ## Blaze
 
@@ -10,7 +10,7 @@ Blaze amplifies the search inside the Control Panel - linking you to entries, co
 
 ## Installation
 
-Installing Blaze is simple! All you need to do is require Blaze as a dependency in your app:
+Installing Blaze is simple! All you need to do is require Blaze as a Composer dependency:
 
 ```
 composer require doublethreedigital/blaze
