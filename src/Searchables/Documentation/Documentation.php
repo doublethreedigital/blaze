@@ -3,8 +3,8 @@
 namespace DoubleThreeDigital\Blaze\Searchables\Documentation;
 
 use Algolia\AlgoliaSearch\SearchClient;
-use DoubleThreeDigital\Blaze\Contracts\Searchable;
 use DoubleThreeDigital\Blaze\Blaze;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
 use Illuminate\Support\Collection;
 use Statamic\Contracts\Auth\User;
 
@@ -39,12 +39,12 @@ class Documentation implements Searchable
                 )
             );
 
-            $title = $hit['hierarchy']['lvl' . $highestLvl];
+            $title = $hit['hierarchy']['lvl'.$highestLvl];
             $currentLvl = 0;
             $subtitle = $hit['hierarchy']['lvl0'];
             while ($currentLvl < $highestLvl) {
                 $currentLvl = $currentLvl + 1;
-                $subtitle = $subtitle . ' » ' . $hit['hierarchy']['lvl' . $currentLvl];
+                $subtitle = $subtitle.' » '.$hit['hierarchy']['lvl'.$currentLvl];
             }
 
             $searchResults[] = new DocumentationHit($title, $hit['url']);

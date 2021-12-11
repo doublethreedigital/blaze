@@ -2,9 +2,9 @@
 
 namespace DoubleThreeDigital\Blaze\Tests;
 
-use Statamic\Extend\Manifest;
-use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use DoubleThreeDigital\Blaze\ServiceProvider;
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Statamic\Extend\Manifest;
 use Statamic\Facades\Blueprint;
 use Statamic\Facades\Fieldset;
 use Statamic\Providers\StatamicServiceProvider;
@@ -60,7 +60,7 @@ abstract class TestCase extends OrchestraTestCase
 
         $configs = [
             'assets', 'cp', 'forms', 'static_caching',
-            'sites', 'stache', 'system', 'users'
+            'sites', 'stache', 'system', 'users',
         ];
 
         foreach ($configs as $config) {

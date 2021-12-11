@@ -18,7 +18,7 @@ class CPNav implements Searchable
         })->reject(function ($navItem) {
             // We don't want no utilities here.. we have a separate searchable for that
 
-            return str_contains($navItem->url(), "utilities/");
+            return str_contains($navItem->url(), 'utilities/');
         });
     }
 

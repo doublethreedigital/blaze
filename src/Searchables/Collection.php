@@ -2,8 +2,8 @@
 
 namespace DoubleThreeDigital\Blaze\Searchables;
 
-use DoubleThreeDigital\Blaze\Contracts\Searchable;
 use DoubleThreeDigital\Blaze\Blaze;
+use DoubleThreeDigital\Blaze\Contracts\Searchable;
 use Illuminate\Support\Collection as IlluminateCollection;
 use Statamic\Contracts\Auth\User;
 use Statamic\Facades\Collection as CollectionFacade;
