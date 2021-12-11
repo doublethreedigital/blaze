@@ -35,6 +35,6 @@ class UserGroup implements Searchable
 
     public function authorize(User $user, $result): bool
     {
-        return $user->can("edit user groups");
+        return $user->can('edit user groups');
     }
 }

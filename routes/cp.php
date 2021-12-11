@@ -1,7 +1,7 @@
 <?php
 
-use DoubleThreeDigital\Blaze\Http\Controllers\ConfigController;
 use DoubleThreeDigital\Blaze\Http\Controllers\BlazeController;
+use DoubleThreeDigital\Blaze\Http\Controllers\ConfigController;
 use Illuminate\Support\Facades\Route;
 
 Route::name('blaze.')->prefix('blaze')->group(function () {

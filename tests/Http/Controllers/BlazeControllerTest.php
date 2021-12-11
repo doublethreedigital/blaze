@@ -178,7 +178,6 @@ class BlazeControllerTest extends TestCase
             ->assertSee('blueprints');
     }
 
-
     /** @test */
     public function can_search_for_fieldset()
     {

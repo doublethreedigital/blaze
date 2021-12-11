@@ -2,8 +2,8 @@
 
 namespace DoubleThreeDigital\Blaze\Http\Controllers;
 
-use DoubleThreeDigital\Blaze\Http\Requests\BlazeRequest;
 use DoubleThreeDigital\Blaze\Blaze;
+use DoubleThreeDigital\Blaze\Http\Requests\BlazeRequest;
 
 class BlazeController
 {

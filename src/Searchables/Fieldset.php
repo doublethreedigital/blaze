@@ -35,6 +35,6 @@ class Fieldset implements Searchable
 
     public function authorize(User $user, $result): bool
     {
-        return $user->can("configure fields");
+        return $user->can('configure fields');
     }
 }

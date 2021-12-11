@@ -35,6 +35,6 @@ class UserRole implements Searchable
 
     public function authorize(User $user, $result): bool
     {
-        return $user->can("edit roles");
+        return $user->can('edit roles');
     }
 }
