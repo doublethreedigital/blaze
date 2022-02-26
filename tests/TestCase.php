@@ -46,12 +46,12 @@ abstract class TestCase extends OrchestraTestCase
         $app->make(Manifest::class)->manifest = [
             'doublethreedigital/blaze' => [
                 'id' => 'doublethreedigital/blaze',
-                'namespace' => 'DoubleThreeDigital\\Blaze\\',
+                'namespace' => 'DoubleThreeDigital\\Blaze',
             ],
         ];
 
-        Fieldset::setDirectory(__DIR__.'/__fixtures__/resources/fieldsets');
-        Blueprint::setDirectory(__DIR__.'/__fixtures__/resources/blueprints');
+        Fieldset::setDirectory(__DIR__ . '/__fixtures__/resources/fieldsets');
+        Blueprint::setDirectory(__DIR__ . '/__fixtures__/resources/blueprints');
     }
 
     protected function resolveApplicationConfiguration($app)
@@ -64,18 +64,18 @@ abstract class TestCase extends OrchestraTestCase
         ];
 
         foreach ($configs as $config) {
-            $app['config']->set("statamic.$config", require(__DIR__."/../vendor/statamic/cms/config/{$config}.php"));
+            $app['config']->set("statamic.$config", require(__DIR__ . "/../vendor/statamic/cms/config/{$config}.php"));
         }
 
         $app['config']->set('statamic.users.repository', 'file');
         $app['config']->set('statamic.editions.pro', true);
 
-        $app['config']->set('statamic.stache.stores.taxonomies.directory', __DIR__.'/__fixtures__/content/taxonomies');
-        $app['config']->set('statamic.stache.stores.terms.directory', __DIR__.'/__fixtures__/content/taxonomies');
-        $app['config']->set('statamic.stache.stores.collections.directory', __DIR__.'/__fixtures__/content/collections');
-        $app['config']->set('statamic.stache.stores.entries.directory', __DIR__.'/__fixtures__/content/collections');
-        $app['config']->set('statamic.stache.stores.navigation.directory', __DIR__.'/__fixtures__/content/navigation');
-        $app['config']->set('statamic.stache.stores.globals.directory', __DIR__.'/__fixtures__/content/globals');
-        $app['config']->set('statamic.stache.stores.asset-containers.directory', __DIR__.'/__fixtures__/content/assets');
+        $app['config']->set('statamic.stache.stores.taxonomies.directory', __DIR__ . '/__fixtures__/content/taxonomies');
+        $app['config']->set('statamic.stache.stores.terms.directory', __DIR__ . '/__fixtures__/content/taxonomies');
+        $app['config']->set('statamic.stache.stores.collections.directory', __DIR__ . '/__fixtures__/content/collections');
+        $app['config']->set('statamic.stache.stores.entries.directory', __DIR__ . '/__fixtures__/content/collections');
+        $app['config']->set('statamic.stache.stores.navigation.directory', __DIR__ . '/__fixtures__/content/navigation');
+        $app['config']->set('statamic.stache.stores.globals.directory', __DIR__ . '/__fixtures__/content/globals');
+        $app['config']->set('statamic.stache.stores.asset-containers.directory', __DIR__ . '/__fixtures__/content/assets');
     }
 }
