@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v1.1.1 (2022-02-26)
+
+### What's fixed
+
+- _Hopefuly_ fixed the release pipeline 😅
+
 ## v1.1.0 (2022-02-26)
 
 ### What's new
