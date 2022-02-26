@@ -16,7 +16,7 @@ Installing Blaze is simple! All you need to do is require Blaze as a Composer de
 composer require doublethreedigital/blaze
 ```
 
-Now, you should be able to open up Blaze with `⌘ P` (or `Ctrl P` on Windows) 
+Now, you should be able to open up Blaze with `⌘ P` (or `Ctrl P` on Windows)
 
 ## Documentation
 
@@ -24,14 +24,13 @@ Read the documentation over on the [Statamic Marketplace](https://statamic.com/a
 
 ## Sponsor Duncan
 
-This addon is open-source, meaning anyone can use this addon in their sites for **free**! 
+This addon is open-source, meaning anyone can use this addon in their sites for **free**!
 
 However, maintaining and developing new features for open-source projects can take quite a bit of time. If you're using Blaze in your production environment, please [consider sponsoring me](https://github.com/sponsors/duncanmcclean) (Duncan McClean) for a couple dollars a month.
 
-
 ## Security
 
-Only the latest version of Blaze (v1.0) will receive security updates if a vulnerability is found. 
+Only the latest version of Blaze (v1.1) will receive security updates if a vulnerability is found.
 
 If you discover a security vulnerability, please report it to Duncan straight away, [via email](mailto:security@doublethree.digital). Please don't report security issues through GitHub Issues.
 
