@@ -6,7 +6,7 @@
 
 ### What's fixed
 
-- _Hopefuly_ fixed the release pipeline 😅
+- _Hopefully_ fixed the release pipeline 😅
 
 ## v1.1.0 (2022-02-26)
 
