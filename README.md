@@ -6,7 +6,7 @@
 
 <!-- /statamic:hide -->
 
-Blaze amplifies the search inside the Control Panel - linking you to entries, collections, nav items & documentation. It's almost like [Alfred](https://www.alfredapp.com/), but built inside the CP. <!-- statamic:hide --> [**Watch a short demo video**](https://www.loom.com/share/921195d9d2074811af4ba1179623008b) <!-- /statamic:hide -->
+Blaze is a super-fast command palette for the Statamic Control Panel - linking you to entries, collections, nav items & documentation. <!-- statamic:hide --> [**Watch a short demo video**](https://www.loom.com/share/921195d9d2074811af4ba1179623008b) <!-- /statamic:hide -->
 
 ## Installation
 
