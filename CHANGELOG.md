@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v1.2.0 (2022-06-14)
+
+### What's new
+
+- You can now control Blaze with the up/down keys on your keyboard #20 #21 by @duncanmcclean
+
 ## v1.1.1 (2022-02-26)
 
 ### What's fixed
