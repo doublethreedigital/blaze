@@ -7,6 +7,7 @@ use DoubleThreeDigital\Blaze\Contracts\Searchable;
 use Illuminate\Support\Collection as IlluminateCollection;
 use Statamic\Contracts\Auth\User;
 use Statamic\Facades\Search;
+use Statamic\Facades\Site;
 
 class StatamicSearch implements Searchable
 {
@@ -15,14 +16,21 @@ class StatamicSearch implements Searchable
         return Search::index()
             ->ensureExists()
             ->search($query)
-            ->get();
+            ->get()
+            ->filter(function ($result) {
+                if ($result instanceof \Statamic\Contracts\Entries\Entry) {
+                    return $result->site()->handle() === Site::selected()->handle();
+                }
+
+                return true;
+            });
     }
 
     public function transform($result): array
     {
         if ($result instanceof \Statamic\Contracts\Entries\Entry) {
             return [
-                'title'  => $result->get('title'),
+                'title'  => $result->value('title'),
                 'icon'   => Blaze::svg('content-writing'),
                 'url'    => $result->editUrl(),
                 'target' => '_self',
