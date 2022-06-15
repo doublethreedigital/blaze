@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v1.2.1 (2022-06-15)
+
+### What's improved
+
+- Entry searches are now scoped to the currently selected site, when using multi-site. #24 #25
+
 ## v1.2.0 (2022-06-14)
 
 ### What's new
