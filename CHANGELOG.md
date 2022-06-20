@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v1.2.2 (2022-06-20)
+
+### What's new
+
+- Added a button in the Control Panel header to toggle Blaze #26 #27 by @duncanmcclean
+
 ## v1.2.1 (2022-06-15)
 
 ### What's improved
