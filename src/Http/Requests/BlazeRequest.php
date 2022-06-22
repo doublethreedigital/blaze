@@ -14,7 +14,7 @@ class BlazeRequest extends FormRequest
     public function rules()
     {
         return [
-            'query' => ['required', 'string'],
+            'query' => ['nullable', 'string'],
         ];
     }
 }
