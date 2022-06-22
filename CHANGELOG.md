@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+## v1.2.3 (2022-06-22)
+
+### What's improved
+
+- CP Nav Item results are now localised #30 #33
+- You can now click away from the Blaze modal/window/popup to close it #28 #34
+
+### What's fixed
+
+- Fixed validation errors when Blaze does a request with an empty query
+
 ## v1.2.2 (2022-06-20)
 
 ### What's new
