@@ -6,8 +6,8 @@
     height="auto"
     :adaptive="true"
     :pivotY="0.1"
-    @closed="open = false"
     v-on-clickaway="close"
+    @closed="close"
   >
     <div class="bg-grey-20 border-b text-center">
       <input
@@ -215,7 +215,7 @@ export default {
     },
 
     close() {
-      // this.open = false
+      this.open = false;
     },
   },
 
