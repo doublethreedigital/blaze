@@ -9,6 +9,10 @@ class BlazeController
 {
     public function index(BlazeRequest $request)
     {
+        if (empty($request->get('query'))) {
+            return collect();
+        }
+
         return Blaze::search($request->get('query'));
     }
 }
