@@ -25,7 +25,7 @@ class CPNav implements Searchable
     public function transform($result): array
     {
         return [
-            'title'  => $result->name(),
+            'title'  => __($result->name()),
             'icon'   => $result->icon(),
             'url'    => $result->url(),
             'target' => '_self',
