@@ -95,11 +95,8 @@ class Blueprint implements Searchable
         }
 
         if (str_starts_with($blueprint->namespace(), 'global')) {
-            $globalSet = explode('.', $blueprint->namespace())[1];
-
-            return cp_route('globals.blueprints.edit', [
-                'global_set' => $globalSet,
-                'blueprint'  => $blueprint->handle(),
+            return cp_route('globals.blueprint.edit', [
+                'global_set' => $blueprint->handle(),
             ]);
         }
 
