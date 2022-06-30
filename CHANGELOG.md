@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## v1.2.4 (2022-06-30)
+
+### What's fixed
+
+- Fixed issue with Global Set blueprint searching #29 #37
+- Fixed an issue with German umlauts and Documentation searchable #35 #36
+
 ## v1.2.3 (2022-06-22)
 
 ### What's improved
