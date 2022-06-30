@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v1.2.5 (2022-06-30)
+
+### What's fixed
+
+- Fixed issue with Safari where only one character could be entered, then Blaze broke #38
+
 ## v1.2.4 (2022-06-30)
 
 ### What's fixed
