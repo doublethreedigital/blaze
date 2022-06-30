@@ -17,6 +17,15 @@ class Documentation implements Searchable
     {
         $searchResults = [];
 
+        if (
+            str_contains($query, 'ä')
+            || str_contains($query, 'ö')
+            || str_contains($query, 'ü')
+            || str_contains($query, 'ß')
+        ) {
+            return collect();
+        }
+
         $algoliaClient = SearchClient::create(
             self::ALGOLIA_APPLICATION_ID,
             self::ALGOLIA_ADMIN_API_KEY
@@ -39,12 +48,12 @@ class Documentation implements Searchable
                 )
             );
 
-            $title = $hit['hierarchy']['lvl'.$highestLvl];
+            $title = $hit['hierarchy']['lvl' . $highestLvl];
             $currentLvl = 0;
             $subtitle = $hit['hierarchy']['lvl0'];
             while ($currentLvl < $highestLvl) {
                 $currentLvl = $currentLvl + 1;
-                $subtitle = $subtitle.' » '.$hit['hierarchy']['lvl'.$currentLvl];
+                $subtitle = $subtitle . ' » ' . $hit['hierarchy']['lvl' . $currentLvl];
             }
 
             $searchResults[] = new DocumentationHit($title, $hit['url']);

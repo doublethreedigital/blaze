@@ -252,6 +252,22 @@ class BlazeControllerTest extends TestCase
             ->assertSee('using-an-independent-authentication-guard');
     }
 
+    /**
+     * @test
+     * https://github.com/doublethreedigital/blaze/issues/35
+     */
+    public function cant_search_for_documentation_page_that_contains_german_umlaut()
+    {
+        $this
+            ->actingAs($this->user())
+            ->post(cp_route('blaze.search', [
+                'query' => 'ö',
+            ]))
+            ->assertOk()
+            ->assertDontSee('order_type')
+            ->assertDontSee('offset');
+    }
+
     protected function user()
     {
         return User::make()
