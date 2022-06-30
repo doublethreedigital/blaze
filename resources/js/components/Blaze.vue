@@ -13,7 +13,7 @@
       <input
         id="blaze-input"
         type="text"
-        class="p-2 text-lg w-full bg-transparent focus:outline-none select-none"
+        class="p-2 text-lg w-full bg-transparent focus:outline-none"
         v-model="query"
         placeholder="Looking for something?"
         autofocus
